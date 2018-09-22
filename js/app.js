@@ -1,3 +1,4 @@
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -8,7 +9,7 @@ var Enemy = function() {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite = 'images/char-boy.png';
 };
 
 // Update the enemy's position, required method for game
@@ -58,16 +59,24 @@ Enemy.prototype.render = function() {
 // For each enemy create and push new Enemy objet into above array
 
 
+
+
 //defining our portrait class
 class Hero {
-    constructor(){
-        //properties
+
+    constructor(){  //position properties
+       
         this.x = 0;
         this.y = 0;
-        this.sprite = 'images/char-princess-girl.png';
+        this.sprite = 'images/char-cat-girl.png';
     }
 
+    render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+
+    }
 }
+
 
 
 
@@ -81,7 +90,7 @@ class Hero {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-
+const player = new Hero();
 
 
 // This listens for key presses and sends the keys to your
@@ -96,3 +105,5 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+
