@@ -3,6 +3,9 @@ var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
+    // x position
+    // y position
+
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -14,12 +17,49 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    //If enemy is not passed boundary
+        // Move Forward
+        //Increment x by speed * dt
+    //else
+        //Reset position to start
 };
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+
+
+//****Hero Class///
+
+// Constructor
+    //Properties
+        // x position
+        // y position
+    // Methods
+            // Update position
+                // Collision
+                    //Did player x and y collide with enemy ?
+                // Check win here? 
+                    // Did player x and y reach final title?
+            //Render
+                // Draw player sprite on current x and y coord position
+            // Handle keyboard input
+                // Update player's x and y propety according to input
+            // Reset Hero
+                //Set x and y to starting x and y
+
+
+// New Hero Object
+
+// Initialize allEnemies array
+// For each enemy create and push new Enemy objet into above array
+
+
+
+
 
 // Now write your own player class
 // This class requires an update(), render() and
