@@ -58,6 +58,18 @@ Enemy.prototype.render = function() {
 // For each enemy create and push new Enemy objet into above array
 
 
+//defining our portrait class
+class Hero {
+    constructor(){
+        //properties
+        this.x = 0;
+        this.y = 0;
+        this.sprite = 'images/char-princess-girl.png';
+    }
+
+}
+
+
 
 
 
